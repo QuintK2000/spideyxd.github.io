@@ -8,7 +8,20 @@ function loop(item, index) {
 let usr_id = "";
 let url = "";
 
+function display(){
+
+document.getElementById('loader').style.opacity="1";
+
+}
+function hide(){
+
+document.getElementById('loader').style.opacity="0";
+
+}
+
+
 function usr_i() {
+  display();
   text="";
   let parent = document.getElementById('try');
   let var1   = parent.getElementsByTagName('button');
@@ -48,6 +61,7 @@ function usr_i() {
       )
         .then((response) => response.json())
         .then((data) => {
+          hide();
           url = data.downloadLinks;
 
           url.forEach(loop);

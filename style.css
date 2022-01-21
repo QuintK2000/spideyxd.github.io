@@ -51,6 +51,7 @@ input::placeholder {
     #d6249f 60%,
     #285aeb 90%
   );
+   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   padding-top: 170px;
